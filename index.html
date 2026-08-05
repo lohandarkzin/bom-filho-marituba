@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bom Filho Marituba | Pizzas na brasa e burgers smash</title>
+<meta name="description" content="Pizzas artesanais e burgers smash feitos na brasa. Peca pelo site e receba quentinho em Marituba.">
+<meta name="theme-color" content="#0A0908">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+<!-- ================= CABECALHO ================= -->
+<header class="topo" id="topo">
+  <div class="topo__interno">
+    <a class="marca" href="#topo" aria-label="Bom Filho Marituba, ir para o topo">
+      <span class="marca__nome">
+        <span data-config="marcaLinha1">BOM FILHO</span>
+        <em data-config="marcaLinha2">MARITUBA</em>
+      </span>
+      <span class="marca__tag" data-config="tagline">PIZZAS NA BRASA &bull; BURGERS SMASH</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Menu principal">
+      <a href="#cardapio" data-fecha-menu>CARDAPIO</a>
+      <a href="#cardapio" data-aba="pizzas" data-fecha-menu>PIZZAS</a>
+      <a href="#cardapio" data-aba="burgers" data-fecha-menu>BURGERS</a>
+      <a href="#cardapio" data-aba="bebidas" data-fecha-menu>BEBIDAS</a>
+      <a href="#" data-abre-carrinho data-fecha-menu>MEU PEDIDO</a>
+    </nav>
+
+    <div class="topo__acoes">
+      <button class="btn-pedido" type="button" data-abre-carrinho aria-label="Abrir meu pedido">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h3.2l1 4M7.2 12.5h10.3l2.5-8H6.2M7.2 12.5 6.2 7M7.2 12.5l-.9 3.5h12.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19.5" r="1.6" fill="currentColor"/><circle cx="17.5" cy="19.5" r="1.6" fill="currentColor"/></svg>
+        <span>MEU PEDIDO</span>
+        <em class="btn-pedido__bolha" data-contador>0</em>
+      </button>
+
+      <button class="btn-menu" type="button" id="btnMenu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <img class="hero__foto" src="assets/img/hero-brasa.jpg" alt="Pizza na brasa e hamburguer smash sobre tabua de madeira com chamas ao fundo" width="1536" height="1024" fetchpriority="high">
+    <div class="hero__veu"></div>
+    <div class="hero__conteudo">
+      <h1 class="hero__titulo">FEITO NA BRASA.<br>SABOR DE VERDADE.</h1>
+      <p class="hero__texto">PIZZAS ARTESANAIS E BURGERS SMASH<br>FEITOS NA BRASA, DO JEITO QUE TEM QUE SER.</p>
+      <a class="btn-ouro hero__cta" href="#cardapio">VER CARD&Aacute;PIO</a>
+    </div>
+  </section>
+
+  <!-- ================= CARDAPIO ================= -->
+  <section class="cardapio" id="cardapio">
+    <div class="abas" role="tablist" aria-label="Categorias do cardapio">
+      <button class="aba" role="tab" type="button" data-categoria="pizzas" aria-selected="true">PIZZAS</button>
+      <button class="aba" role="tab" type="button" data-categoria="burgers" aria-selected="false">HAMBURGUERES</button>
+      <button class="aba" role="tab" type="button" data-categoria="bebidas" aria-selected="false">BEBIDAS</button>
+    </div>
+
+    <div class="busca">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="search" id="campoBusca" placeholder="Buscar no card&aacute;pio" aria-label="Buscar no cardapio" autocomplete="off">
+    </div>
+
+    <div class="grade" id="grade"></div>
+    <p class="vazio" id="vazio" hidden>Nenhum item encontrado com esse nome.</p>
+  </section>
+
+  <!-- ================= INFORMACOES ================= -->
+  <section class="infos">
+    <div class="info">
+      <svg class="ico ico--g" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s7-6.1 7-11.1A7 7 0 0 0 5 10.4c0 5 7 11.1 7 11.1Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10.2" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <div>
+        <h2 data-config="enderecoLinha1">AV. JOAO PAULO II, 1200</h2>
+        <p data-config="enderecoLinha2">CENTRO, MARITUBA - PA</p>
+        <p class="info__fraco" data-config="enderecoLinha3">CEP 67200-000</p>
+      </div>
+    </div>
+
+    <div class="info">
+      <svg class="ico ico--g" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 6.8V12l3.4 2.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <div>
+        <h2>HOR&Aacute;RIO DE FUNCIONAMENTO</h2>
+        <p data-config="horarioLinha1">TERCA A DOMINGO: 18H AS 00H</p>
+        <p class="info__fraco" data-config="horarioLinha2">FECHADO AS SEGUNDAS</p>
+      </div>
+    </div>
+
+    <div class="info">
+      <svg class="ico ico--g" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="17.5" r="2.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18.2" cy="17.5" r="2.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.8 17.5h6.6M6 17.5 9.4 8h3.2m0 0 3.6 9.5M12.6 8h-2m6.2-2.6h2.4l1.6 5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <h2>DELIVERY R&Aacute;PIDO</h2>
+        <p>RECEBA QUENTINHO NA SUA CASA.</p>
+        <p class="info__fraco">CONSULTE A TAXA NO CHECKOUT.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p><span data-config="marcaLinha1">BOM FILHO</span> <em data-config="marcaLinha2">MARITUBA</em> &mdash; PIZZARIA E HAMBURGUERIA</p>
+</footer>
+
+<!-- ================= BARRA FIXA DO CELULAR ================= -->
+<button class="barra-mobile" type="button" data-abre-carrinho hidden>
+  <span class="barra-mobile__qtd"><em data-contador>0</em> <span data-rotulo-itens>itens</span></span>
+  <span>VER MEU PEDIDO</span>
+  <span class="barra-mobile__total" data-total-barra>R$ 0,00</span>
+</button>
+
+<!-- ================= CARRINHO ================= -->
+<div class="cortina" id="cortina" hidden></div>
+
+<aside class="carrinho" id="carrinho" aria-label="Meu pedido" aria-hidden="true">
+  <header class="carrinho__topo">
+    <h2>MEU PEDIDO</h2>
+    <button class="btn-fechar" type="button" id="btnFechar" aria-label="Fechar meu pedido">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <div class="carrinho__corpo" id="carrinhoCorpo">
+    <div class="carrinho__lista" id="listaItens"></div>
+
+    <p class="carrinho__vazio" id="carrinhoVazio">
+      Seu pedido ainda est&aacute; vazio.<br>
+      Escolha uma pizza ou um burger no card&aacute;pio.
+    </p>
+
+    <form class="form" id="formPedido" novalidate>
+      <fieldset class="form__bloco">
+        <legend>COMO VOC&Ecirc; QUER RECEBER?</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="entrega" value="entrega" checked><span>Entrega</span></label>
+          <label class="opcao"><input type="radio" name="entrega" value="retirada"><span>Retirar na loja</span></label>
+        </div>
+      </fieldset>
+
+      <label class="campo">
+        <span>SEU NOME</span>
+        <input type="text" id="campoNome" placeholder="Ex.: Maria Silva" autocomplete="name" required>
+      </label>
+
+      <label class="campo" id="campoEnderecoBox">
+        <span>ENDERE&Ccedil;O DA ENTREGA</span>
+        <input type="text" id="campoEndereco" placeholder="Rua, n&uacute;mero, bairro e ponto de refer&ecirc;ncia" autocomplete="street-address">
+      </label>
+
+      <label class="campo">
+        <span>FORMA DE PAGAMENTO</span>
+        <select id="campoPagamento"></select>
+      </label>
+
+      <label class="campo" id="campoTrocoBox" hidden>
+        <span>PRECISA DE TROCO PARA QUANTO?</span>
+        <input type="text" id="campoTroco" placeholder="Ex.: 100,00 (deixe vazio se n&atilde;o precisa)" inputmode="decimal">
+      </label>
+
+      <label class="campo">
+        <span>OBSERVA&Ccedil;&Otilde;ES (OPCIONAL)</span>
+        <textarea id="campoObs" rows="2" placeholder="Ex.: sem cebola, refrigerante sabor guaran&aacute;"></textarea>
+      </label>
+
+      <p class="form__erro" id="formErro" hidden></p>
+    </form>
+  </div>
+
+  <footer class="carrinho__rodape">
+    <div class="linha"><span>Subtotal</span><strong data-subtotal>R$ 0,00</strong></div>
+    <div class="linha" id="linhaTaxa"><span>Taxa de entrega</span><strong data-taxa>R$ 0,00</strong></div>
+    <div class="linha linha--total"><span>Total</span><strong data-total>R$ 0,00</strong></div>
+    <button class="btn-whats" type="button" id="btnEnviar" disabled>
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.9 7L4 20l1.5-4a8 8 0 1 1 14.5-4.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 8.4c.3-.1.6 0 .8.3l.7 1.2c.1.3.1.5-.1.7l-.4.5c-.1.2-.1.4 0 .5.4.7 1 1.3 1.8 1.7.2.1.4.1.5-.1l.5-.5c.2-.2.4-.2.6-.1l1.3.7c.3.1.4.5.3.8-.3.7-1 1.1-1.7 1-2-.2-4.3-2.4-4.6-4.5-.1-.8.2-1.4.9-1.7Z" fill="currentColor"/></svg>
+      ENVIAR PEDIDO PELO WHATSAPP
+    </button>
+    <p class="carrinho__aviso">Voc&ecirc; confere tudo no WhatsApp antes de confirmar.</p>
+  </footer>
+</aside>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+<script src="assets/js/cardapio.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

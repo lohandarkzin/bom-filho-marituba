@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Bom Filho Marituba">
+  <rect width="240" height="240" fill="#0A0908"/>
+  <rect x="14" y="14" width="212" height="212" fill="none" stroke="#D8A64B" stroke-width="4"/>
+  <rect x="24" y="24" width="192" height="192" fill="none" stroke="#D8A64B" stroke-width="1.5" opacity=".5"/>
+  <path d="M58 74h46.6c17.3 0 26.3 7.5 26.3 21 0 9.8-5.3 16.1-14.7 18.8v.7c11.7 2.3 18.4 9.4 18.4 20.6 0 15-10.5 23.6-28.9 23.6H58V74Zm23.7 34.5h14.6c7.1 0 11.3-3.4 11.3-9s-4.1-8.6-11.3-8.6H81.7v17.6Zm0 34.9h16.1c7.9 0 12.4-3.7 12.4-10.1s-4.5-9.7-12.8-9.7H81.7v19.8Z" fill="#D8A64B"/>
+  <path d="M144 74h48.8v18h-25.1v17.3h22.9v17.4h-22.9v32H144V74Z" fill="#F5EFE6"/>
+  <path d="M58 176h124" stroke="#D8A64B" stroke-width="3"/>
+</svg>
