@@ -28,6 +28,7 @@
   var nav = pega("#nav");
 
   var categoriaAtual = "pizzas";
+  var avisoPizzas = document.getElementById("avisoPizzas");
   var pedido = carregar();
 
   /* ---------------------------------------------------------------- dados */
@@ -159,6 +160,8 @@
 
   function trocarAba(categoria) {
     categoriaAtual = categoria;
+    var avisoPizzas = document.getElementById("avisoPizzas");
+    if (avisoPizzas) avisoPizzas.hidden = categoria !== "pizzas";
     campoBusca.value = "";
     pegaTodos(".aba").forEach(function (aba) {
       aba.setAttribute("aria-selected", String(aba.getAttribute("data-categoria") === categoria));

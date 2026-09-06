@@ -1,0 +1,21 @@
+/* Tela promocional automática */
+.promo-overlay{position:fixed;inset:0;z-index:9999;background:rgba(5,4,3,.92);display:flex;align-items:center;justify-content:center;padding:20px;opacity:1;visibility:visible;transition:opacity .25s ease,visibility .25s ease}
+.promo-overlay[hidden]{display:none}
+.promo-overlay.is-fechando{opacity:0;visibility:hidden}
+.promo-box{position:relative;width:min(980px,96vw);height:min(620px,86vh);overflow:hidden;border:1px solid rgba(218,164,58,.55);border-radius:18px;background:#100e0c;box-shadow:0 25px 80px rgba(0,0,0,.7)}
+.promo-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.promo-slide.is-ativo{opacity:1;pointer-events:auto}
+.promo-slide img,.promo-slide video{width:100%;height:100%;object-fit:cover;display:block}
+.promo-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.18) 65%,rgba(0,0,0,.55))}
+.promo-conteudo{position:absolute;z-index:2;left:clamp(24px,5vw,64px);bottom:clamp(55px,8vw,72px);max-width:580px;color:#fff}
+.promo-kicker{font:700 15px/1.1 'Barlow Condensed',sans-serif;letter-spacing:2px;color:#e5ad3e;margin:0 0 10px;text-transform:uppercase}
+.promo-titulo{font:800 clamp(36px,6vw,72px)/.92 Anton,sans-serif;letter-spacing:.5px;margin:0 0 14px;text-transform:uppercase}
+.promo-texto{font:500 clamp(16px,2vw,22px)/1.25 Barlow,sans-serif;margin:0 0 20px;max-width:500px}
+.promo-btn{display:inline-flex;align-items:center;justify-content:center;background:#dda83f;color:#0d0b09;text-decoration:none;border:0;padding:13px 22px;border-radius:7px;font:800 16px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;cursor:pointer}
+.promo-fechar{position:absolute;z-index:5;right:15px;top:15px;width:42px;height:42px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:rgba(0,0,0,.5);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.promo-controles{position:absolute;z-index:4;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:8px}
+.promo-dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer}
+.promo-dot.is-ativo{background:#e0a63b;transform:scale(1.25)}
+.promo-aviso{position:absolute;z-index:4;right:20px;bottom:17px;color:rgba(255,255,255,.7);font:500 12px/1 Barlow,sans-serif}
+body.promo-aberta{overflow:hidden}
+@media(max-width:600px){.promo-overlay{padding:10px}.promo-box{height:78vh;border-radius:12px}.promo-slide::after{background:linear-gradient(0deg,rgba(0,0,0,.85),rgba(0,0,0,.08) 65%,rgba(0,0,0,.4))}.promo-conteudo{left:22px;right:22px;bottom:52px}.promo-titulo{font-size:42px}.promo-texto{font-size:16px}.promo-aviso{display:none}.promo-fechar{width:38px;height:38px;right:10px;top:10px}}

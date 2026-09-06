@@ -844,3 +844,19 @@ body.travado .barra-mobile { display: none; }
     transition-duration: .001ms !important;
   }
 }
+
+
+/* Aviso exclusivo das pizzas */
+.aviso-pizzas {
+  margin: 0 auto 18px;
+  max-width: 520px;
+  padding: 10px 16px;
+  text-align: center;
+  border: 1px solid rgba(230, 174, 62, .45);
+  background: rgba(230, 174, 62, .08);
+  color: #e6ae3e;
+  font-size: .88rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.aviso-pizzas strong { font-weight: 800; }

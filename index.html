@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/estilo.css">
+<link rel="stylesheet" href="assets/css/promocao.css">
 </head>
 <body>
 
@@ -68,6 +69,8 @@
       <button class="aba" role="tab" type="button" data-categoria="bebidas" aria-selected="false">BEBIDAS</button>
     </div>
 
+    <div class="aviso-pizzas" id="avisoPizzas">🍕 <strong>PIZZAS: apenas tamanho G (8 fatias)</strong></div>
+
     <div class="busca">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       <input type="search" id="campoBusca" placeholder="Buscar no card&aacute;pio" aria-label="Buscar no cardapio" autocomplete="off">
@@ -118,6 +121,62 @@
   <span>VER MEU PEDIDO</span>
   <span class="barra-mobile__total" data-total-barra>R$ 0,00</span>
 </button>
+
+
+<!-- ================= TELA DE PROMOÇÕES ================= -->
+<div class="promo-overlay" id="promoOverlay" aria-label="Promoções" role="dialog" aria-modal="true">
+  <div class="promo-box">
+    <button class="promo-fechar" id="promoFechar" type="button" aria-label="Fechar promoções">&times;</button>
+
+    <article class="promo-slide is-ativo">
+      <img src="assets/img/hero-brasa.jpg" alt="Hambúrguer e pizza feitos na brasa">
+      <div class="promo-conteudo">
+        <p class="promo-kicker">BOM FILHO MARITUBA</p>
+        <h2 class="promo-titulo">FEITO NA BRASA</h2>
+        <p class="promo-texto">Pizzas artesanais e burgers smash preparados para chegar quentinhos até você.</p>
+        <a class="promo-btn" href="#cardapio">Ver cardápio</a>
+      </div>
+    </article>
+
+    <article class="promo-slide">
+      <img src="assets/img/pizza-frango-catupiry.jpg" alt="Pizza de frango com catupiry">
+      <div class="promo-conteudo">
+        <p class="promo-kicker">PROMOÇÃO</p>
+        <h2 class="promo-titulo">PIZZA + SABOR</h2>
+        <p class="promo-texto">Escolha sua pizza favorita e monte seu pedido do seu jeito.</p>
+        <a class="promo-btn" href="#cardapio" data-aba="pizzas">Pedir pizza</a>
+      </div>
+    </article>
+
+    <article class="promo-slide">
+      <img src="assets/img/burger-bacon-cheddar.jpg" alt="Hambúrguer bacon cheddar">
+      <div class="promo-conteudo">
+        <p class="promo-kicker">BURGERS NA BRASA</p>
+        <h2 class="promo-titulo">BATEU A FOME?</h2>
+        <p class="promo-texto">Tem burger caprichado, bacon, cheddar e muito sabor esperando por você.</p>
+        <a class="promo-btn" href="#cardapio" data-aba="burgers">Ver burgers</a>
+      </div>
+    </article>
+
+    <article class="promo-slide">
+      <img src="assets/img/produto-bebidas.jpg" alt="Bebidas geladas">
+      <div class="promo-conteudo">
+        <p class="promo-kicker">PARA ACOMPANHAR</p>
+        <h2 class="promo-titulo">BEBIDA GELADA</h2>
+        <p class="promo-texto">Complete seu pedido com refrigerantes, sucos e outras opções.</p>
+        <a class="promo-btn" href="#cardapio" data-aba="bebidas">Ver bebidas</a>
+      </div>
+    </article>
+
+    <div class="promo-controles" id="promoControles" aria-label="Selecionar promoção">
+      <button class="promo-dot is-ativo" type="button" aria-label="Promoção 1"></button>
+      <button class="promo-dot" type="button" aria-label="Promoção 2"></button>
+      <button class="promo-dot" type="button" aria-label="Promoção 3"></button>
+      <button class="promo-dot" type="button" aria-label="Promoção 4"></button>
+    </div>
+    <span class="promo-aviso">Troca automática a cada 5 segundos</span>
+  </div>
+</div>
 
 <!-- ================= CARRINHO ================= -->
 <div class="cortina" id="cortina" hidden></div>
@@ -190,6 +249,48 @@
 
 <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
 
+
+<script>
+(function(){
+  const overlay = document.getElementById('promoOverlay');
+  if (!overlay) return;
+  const slides = [...overlay.querySelectorAll('.promo-slide')];
+  const dots = [...overlay.querySelectorAll('.promo-dot')];
+  const close = document.getElementById('promoFechar');
+  let index = 0;
+  let timer;
+
+  function show(i){
+    index = (i + slides.length) % slides.length;
+    slides.forEach((el,n)=>el.classList.toggle('is-ativo', n===index));
+    dots.forEach((el,n)=>el.classList.toggle('is-ativo', n===index));
+  }
+  function start(){
+    clearInterval(timer);
+    timer = setInterval(()=>show(index+1),5000);
+  }
+  function stop(){ clearInterval(timer); }
+  function fechar(){
+    stop();
+    overlay.classList.add('is-fechando');
+    document.body.classList.remove('promo-aberta');
+    setTimeout(()=>overlay.hidden=true,260);
+  }
+
+  dots.forEach((dot,n)=>dot.addEventListener('click',()=>{show(n);start();}));
+  close.addEventListener('click',fechar);
+  overlay.addEventListener('click',(e)=>{ if(e.target===overlay) fechar(); });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape' && !overlay.hidden) fechar(); });
+  overlay.addEventListener('mouseenter',stop);
+  overlay.addEventListener('mouseleave',start);
+
+  // Links da promoção fecham a tela antes de levar ao cardápio.
+  overlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',fechar));
+
+  document.body.classList.add('promo-aberta');
+  start();
+})();
+</script>
 <script src="assets/js/cardapio.js"></script>
 <script src="assets/js/app.js"></script>
 </body>

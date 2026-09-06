@@ -61,68 +61,45 @@ const CARDAPIO = [
   {
     categoria: "pizzas",
     nome: "PIZZA CALABRESA",
-    descricao: "Molho de tomate, mu\u00e7arela, calabresa fatiada e cebola roxa.",
-    preco: 49.90,
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, cebola e orégano.",
+    preco: 40.00,
     foto: "assets/img/pizza-calabresa.jpg"
   },
   {
     categoria: "pizzas",
-    nome: "PIZZA MARGUERITA",
-    descricao: "Molho de tomate, mu\u00e7arela, tomate cereja e manjeric\u00e3o.",
-    preco: 44.90,
+    nome: "PIZZA MUSSARELA",
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, tomate, azeitona e orégano.",
+    preco: 40.00,
     foto: "assets/img/pizza-marguerita.jpg"
   },
   {
     categoria: "pizzas",
-    nome: "PIZZA QUATRO QUEIJOS",
-    descricao: "Mu\u00e7arela, provolone, parmes\u00e3o e gorgonzola gratinados.",
-    preco: 54.90,
+    nome: "PIZZA 4 QUEIJOS",
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, Catupiry, cheddar, provolone e orégano.",
+    preco: 50.00,
     foto: "assets/img/pizza-quatro-queijos.jpg"
   },
   {
     categoria: "pizzas",
-    nome: "PIZZA PORTUGUESA",
-    descricao: "Presunto, ovo, cebola, azeitona preta e mu\u00e7arela.",
-    preco: 51.90,
-    foto: "assets/img/pizza-portuguesa.jpg"
-  },
-
-  {
-    categoria: "pizzas",
     nome: "PIZZA FRANGO COM CATUPIRY",
-    descricao: "Molho de tomate, muçarela, frango desfiado e Catupiry.",
-    preco: 52.90,
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, frango, Catupiry, tomate e orégano.",
+    preco: 50.00,
     foto: "assets/img/pizza-frango-catupiry.jpg"
   },
   {
     categoria: "pizzas",
-    nome: "PIZZA BACON COM MILHO",
-    descricao: "Molho de tomate, muçarela, bacon crocante e milho.",
-    preco: 53.90,
-    foto: "assets/img/pizza-bacon-milho.jpg"
+    nome: "PIZZA MISTA",
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, presunto, batata palha, azeitona e orégano.",
+    preco: 50.00,
+    foto: "assets/img/pizza-calabresa.jpg"
   },
   {
     categoria: "pizzas",
-    nome: "PIZZA CARNE DE SOL COM CATUPIRY",
-    descricao: "Muçarela, carne de sol desfiada, Catupiry e tomate.",
-    preco: 59.90,
-    foto: "assets/img/pizza-carne-sol-catupiry.jpg"
+    nome: "PIZZA PORTUGUESA",
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, presunto, Catupiry, tomate, pimentão, ovos cozidos, cebola, azeitona e orégano.",
+    preco: 60.00,
+    foto: "assets/img/pizza-portuguesa.jpg"
   },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA BACON COM CHEDDAR",
-    descricao: "Molho de tomate, muçarela, bacon crocante e cheddar.",
-    preco: 56.90,
-    foto: "assets/img/pizza-bacon-cheddar.jpg"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA CALABRESA COM BACON",
-    descricao: "Molho de tomate, muçarela, calabresa, bacon e azeitona.",
-    preco: 55.90,
-    foto: "assets/img/pizza-calabresa-bacon.jpg"
-  },
-
   /* ---------------------------- HAMBURGUERES --------------------------- */
   {
     categoria: "burgers",
