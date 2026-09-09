@@ -15,7 +15,7 @@ const CONFIG = {
   /* ---- IDENTIDADE DA CASA ---- */
   marcaLinha1: "BOM FILHO",
   marcaLinha2: "MARITUBA",
-  tagline: "PIZZAS NA BRASA \u2022 BURGERS SMASH",
+  tagline: "PIZZAS ARTESANAIS \u2022 BURGERS SMASH",
 
   /* ---- WHATSAPP QUE RECEBE OS PEDIDOS ----
      Formato: 55 + DDD + numero, tudo junto e sem espacos.

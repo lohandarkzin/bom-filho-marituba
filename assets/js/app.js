@@ -74,7 +74,7 @@
       if (valor) { el.textContent = valor; }
     });
 
-    document.title = CONFIG.marcaLinha1 + " " + CONFIG.marcaLinha2 + " | Pizzas na brasa e burgers smash";
+    document.title = CONFIG.marcaLinha1 + " " + CONFIG.marcaLinha2 + " | Pizzas artesanais e burgers smash";
 
     var select = pega("#campoPagamento");
     (CONFIG.pagamentos || []).forEach(function (forma) {
