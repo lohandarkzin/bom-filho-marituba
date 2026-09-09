@@ -100,6 +100,28 @@ const CARDAPIO = [
     preco: 60.00,
     foto: "assets/img/pizza-portuguesa.jpg"
   },
+  {
+    categoria: "pizzas",
+    nome: "PIZZA LOMBO CANADENSE",
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, lombo canadense, muçarela, cebola e orégano.",
+    preco: 50.00,
+    foto: "assets/img/pizza-quatro-queijos.jpg"
+  },
+  {
+    categoria: "pizzas",
+    nome: "PIZZA CALABRESA COM BACON",
+    descricao: "Tamanho G • 8 fatias. Molho especial, calabresa fatiada, bacon, queijo, muçarela e orégano.",
+    preco: 50.00,
+    foto: "assets/img/pizza-calabresa-bacon.jpg"
+  },
+  {
+    categoria: "pizzas",
+    nome: "PIZZA VEGETARIANA",
+    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, tomate, milho, brócolis, cebola, azeitona e orégano.",
+    preco: 50.00,
+    foto: "assets/img/pizza-marguerita.jpg"
+  },
+
   /* ---------------------------- HAMBURGUERES --------------------------- */
   {
     categoria: "burgers",
