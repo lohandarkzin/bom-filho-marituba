@@ -66,6 +66,7 @@
     <div class="abas" role="tablist" aria-label="Categorias do cardapio">
       <button class="aba" role="tab" type="button" data-categoria="pizzas" aria-selected="true">PIZZAS</button>
       <button class="aba" role="tab" type="button" data-categoria="burgers" aria-selected="false">HAMBURGUERES</button>
+      <button class="aba" role="tab" type="button" data-categoria="combos" aria-selected="false">COMBOS</button>
       <button class="aba" role="tab" type="button" data-categoria="bebidas" aria-selected="false">BEBIDAS</button>
     </div>
 
@@ -267,7 +268,7 @@
   }
   function start(){
     clearInterval(timer);
-    timer = setInterval(()=>show(index+1),5000);
+    timer = setInterval(()=>show(index+1),2000);
   }
   function stop(){ clearInterval(timer); }
   function fechar(){

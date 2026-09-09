@@ -155,6 +155,11 @@
       grade.appendChild(card);
     });
 
+    if (categoriaAtual === "combos" && !busca && lista.length === 0) {
+      vazioBusca.textContent = "Novos combos em breve!";
+    } else {
+      vazioBusca.textContent = "Nenhum item encontrado com esse nome.";
+    }
     vazioBusca.hidden = lista.length > 0;
   }
 

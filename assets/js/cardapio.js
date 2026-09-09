@@ -43,7 +43,7 @@ const CONFIG = {
    CARDAPIO
    --------------------------------------------------------------------------
    Cada item tem:
-     categoria -> "pizzas", "burgers" ou "bebidas"
+     categoria -> "pizzas", "burgers", "combos" ou "bebidas"
      nome      -> nome que aparece no card
      descricao -> ingredientes, uma linha
      preco     -> use ponto no lugar da virgula. Ex.: 49.90
