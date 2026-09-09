@@ -125,59 +125,58 @@ const CARDAPIO = [
   /* ---------------------------- HAMBURGUERES --------------------------- */
   {
     categoria: "burgers",
-    nome: "BURGER COSTELA BBQ",
-    descricao: "Smash de costela, cheddar, molho BBQ e cebola crispy.",
-    preco: 39.90,
-    foto: "assets/img/burger-costela-bbq.jpg"
-  },
-  {
-    categoria: "burgers",
-    nome: "SMASH DUPLO CHEDDAR",
-    descricao: "Dois smashs de 90g, cheddar duplo, picles e maionese da casa.",
-    preco: 34.90,
-    foto: "assets/img/burger-smash-duplo.jpg"
-  },
-  {
-    categoria: "burgers",
-    nome: "BURGER FRANGO CRISPY",
-    descricao: "Fil\u00e9 de frango empanado, alface, tomate e molho especial.",
-    preco: 32.90,
-    foto: "assets/img/burger-frango-crispy.jpg"
-  },
-
-  {
-    categoria: "burgers",
-    nome: "BURGER BACON CHEDDAR",
-    descricao: "Smash bovino, cheddar cremoso, bacon crocante e molho da casa.",
-    preco: 38.90,
+    nome: "BF CLASSICO",
+    descricao: "Pão brioche, 1 carne 150g, queijo mussarela, alface americana, tomate e molho especial da casa.",
+    preco: 20.00,
     foto: "assets/img/burger-bacon-cheddar.jpg"
   },
   {
     categoria: "burgers",
-    nome: "BURGER DUPLO BACON",
-    descricao: "Dois smashs, queijo, bacon crocante, picles e molho especial.",
-    preco: 42.90,
-    foto: "assets/img/burger-duplo-bacon.jpg"
-  },
-  {
-    categoria: "burgers",
-    nome: "BURGER CHEDDAR BBQ",
-    descricao: "Smash bovino, cheddar, molho BBQ e cebola crispy.",
-    preco: 37.90,
-    foto: "assets/img/burger-cheddar-bbq.jpg"
-  },
-  {
-    categoria: "burgers",
-    nome: "BURGER FRANGO CHEDDAR",
-    descricao: "Frango crispy, cheddar, alface, tomate e maionese especial.",
-    preco: 35.90,
+    nome: "BF CHICKEN",
+    descricao: "Pão brioche, frango desfiado, queijo mussarela, alface americana, tomate e molho especial da casa.",
+    preco: 20.00,
     foto: "assets/img/burger-frango-cheddar.jpg"
   },
   {
     categoria: "burgers",
-    nome: "SMASH TRIPLO",
-    descricao: "Três smashs de 90g, queijo, picles e molho especial.",
-    preco: 44.90,
+    nome: "BF FAST",
+    descricao: "Pão brioche, 1 carne 150g, bacon crocante, queijo mussarela, alface americana e molho BBQ.",
+    preco: 25.00,
+    foto: "assets/img/burger-cheddar-bbq.jpg"
+  },
+  {
+    categoria: "burgers",
+    nome: "BF PREMIUM",
+    descricao: "Pão brioche, alface, 1 carne (150g), calabresa, bacon, cebola caramelizada e molho da casa.",
+    preco: 25.00,
+    foto: "assets/img/burger-duplo-bacon.jpg"
+  },
+  {
+    categoria: "burgers",
+    nome: "BF CHEDDAR",
+    descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso em dobro, bacon crocante e molho especial da casa.",
+    preco: 30.00,
+    foto: "assets/img/burger-bacon-cheddar.jpg"
+  },
+  {
+    categoria: "burgers",
+    nome: "BF PRIME",
+    descricao: "Pão brioche, 2 carnes (150g cada), calabresa fatiada, bacon crocante, cebola caramelizada, queijo mussarela e molho especial da casa.",
+    preco: 30.00,
+    foto: "assets/img/burger-smash-duplo.jpg"
+  },
+  {
+    categoria: "burgers",
+    nome: "BF SUPREME",
+    descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso, mussarela, bacon crocante, calabresa fatiada, cebola caramelizada, alface americana, tomate e molho.",
+    preco: 35.00,
+    foto: "assets/img/burger-costela-bbq.jpg"
+  },
+  {
+    categoria: "burgers",
+    nome: "BF MONSTER",
+    descricao: "Pão brioche, 3 carnes (150g cada), bacon crocante, calabresa fatiada, cebola caramelizada, queijo mussarela triplo e molho especial da casa.",
+    preco: 40.00,
     foto: "assets/img/burger-smash-triplo.jpg"
   },
 
