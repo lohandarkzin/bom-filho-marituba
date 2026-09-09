@@ -183,72 +183,52 @@ const CARDAPIO = [
   /* ------------------------------ BEBIDAS ------------------------------ */
   {
     categoria: "bebidas",
-    nome: "REFRIGERANTE 2 LITROS",
-    descricao: "Coca-Cola, Guaran\u00e1 ou Fanta. Avise o sabor na observa\u00e7\u00e3o.",
-    preco: 14.00,
-    foto: "assets/img/refrigerante-2l.jpg"
-  },
-  {
-    categoria: "bebidas",
-    nome: "REFRIGERANTE LATA 350ML",
-    descricao: "Gelado, direto da geladeira.",
-    preco: 6.00,
-    foto: "assets/img/refrigerante-lata.jpg"
-  },
-  {
-    categoria: "bebidas",
-    nome: "\u00c1GUA MINERAL 500ML",
-    descricao: "Com ou sem g\u00e1s.",
-    preco: 4.00,
-    foto: "assets/img/produto-bebidas.jpg"
-  },
-  {
-    categoria: "bebidas",
     nome: "COCA-COLA LATA 350ML",
-    descricao: "Gelada.",
-    preco: 6.50,
+    descricao: "Coca-Cola lata 350ml, bem gelada.",
+    preco: 5.00,
     foto: "assets/img/coca-cola-lata.jpg"
   },
   {
     categoria: "bebidas",
-    nome: "GUARAN\u00c1 ANTARCTICA LATA 350ML",
-    descricao: "Gelado.",
-    preco: 6.00,
-    foto: "assets/img/produto-bebidas.jpg"
+    nome: "GUARANÁ LATA 350ML",
+    descricao: "Guaraná lata 350ml, bem gelado.",
+    preco: 5.00,
+    foto: "assets/img/guarana-lata.jpg"
   },
   {
     categoria: "bebidas",
-    nome: "FANTA LARANJA LATA 350ML",
-    descricao: "Gelada.",
-    preco: 6.00,
-    foto: "assets/img/fanta-laranja-lata.jpg"
-  },
-  {
-    categoria: "bebidas",
-    nome: "COCA-COLA ZERO 2 LITROS",
-    descricao: "Gelada.",
-    preco: 14.00,
-    foto: "assets/img/coca-cola-zero-2l.jpg"
-  },
-  {
-    categoria: "bebidas",
-    nome: "GUARAN\u00c1 ANTARCTICA 2 LITROS",
-    descricao: "Gelado.",
+    nome: "COCA-COLA 2L",
+    descricao: "Coca-Cola garrafa 2 litros, bem gelada.",
     preco: 13.00,
-    foto: "assets/img/produto-bebidas.jpg"
+    foto: "assets/img/refrigerante-2l.jpg"
   },
   {
     categoria: "bebidas",
-    nome: "SUCO DE LARANJA 1 LITRO",
-    descricao: "Suco gelado.",
-    preco: 12.00,
+    nome: "FANTA LARANJA 2L",
+    descricao: "Fanta Laranja garrafa 2 litros, bem gelada.",
+    preco: 13.00,
+    foto: "assets/img/refrigerante-2l.jpg"
+  },
+  {
+    categoria: "bebidas",
+    nome: "ÁGUA 500ML",
+    descricao: "Água mineral 500ml.",
+    preco: 3.00,
+    foto: "assets/img/agua-mineral-500ml.jpg"
+  },
+  {
+    categoria: "bebidas",
+    nome: "SUCO NATURAL 300ML",
+    descricao: "Suco natural 300ml. Consulte os sabores disponíveis.",
+    preco: 5.00,
     foto: "assets/img/suco-laranja-1l.jpg"
   },
   {
     categoria: "bebidas",
-    nome: "SUCO DE MARACUJ\u00c1 1 LITRO",
-    descricao: "Suco gelado.",
-    preco: 13.00,
-    foto: "assets/img/produto-bebidas.jpg"
+    nome: "SUCO NATURAL 1L",
+    descricao: "Suco natural 1 litro. Consulte os sabores disponíveis.",
+    preco: 15.00,
+    foto: "assets/img/suco-maracuja-1l.jpg"
   }
+
 ];
