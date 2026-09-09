@@ -28,8 +28,8 @@ const CONFIG = {
   enderecoLinha3: "CEP 67200-000",
 
   /* ---- HORARIO DE FUNCIONAMENTO ---- */
-  horarioLinha1: "TERCA A DOMINGO: 18H AS 00H",
-  horarioLinha2: "FECHADO AS SEGUNDAS",
+  horarioLinha1: "TODOS OS DIAS: 06H AS 00H",
+  horarioLinha2: "ABERTO TODOS OS DIAS",
 
   /* ---- ENTREGA ---- */
   taxaEntrega: 6.0,              // Taxa em reais. Use 0 para entrega gratis.
@@ -102,24 +102,10 @@ const CARDAPIO = [
   },
   {
     categoria: "pizzas",
-    nome: "PIZZA LOMBO CANADENSE",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, lombo canadense, muçarela, cebola e orégano.",
-    preco: 50.00,
-    foto: "assets/img/pizza-quatro-queijos.jpg"
-  },
-  {
-    categoria: "pizzas",
     nome: "PIZZA CALABRESA COM BACON",
     descricao: "Tamanho G • 8 fatias. Molho especial, calabresa fatiada, bacon, queijo, muçarela e orégano.",
     preco: 50.00,
     foto: "assets/img/pizza-calabresa-bacon.jpg"
-  },
-  {
-    categoria: "pizzas",
-    nome: "PIZZA VEGETARIANA",
-    descricao: "Tamanho G • 8 fatias. Molho especial, queijo, tomate, milho, brócolis, cebola, azeitona e orégano.",
-    preco: 50.00,
-    foto: "assets/img/pizza-marguerita.jpg"
   },
 
   /* ---------------------------- HAMBURGUERES --------------------------- */

@@ -27,7 +27,7 @@ Troque pelo seu: 55 + DDD + numero, tudo junto, sem espaco e sem tracinho.
 
 ```
 enderecoLinha1: "AV. JOAO PAULO II, 1200",
-horarioLinha1: "TERCA A DOMINGO: 18H AS 00H",
+horarioLinha1: "TODOS OS DIAS: 06H AS 00H",
 taxaEntrega: 6.0,
 ```
 
