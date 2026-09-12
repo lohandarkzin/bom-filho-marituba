@@ -63,49 +63,49 @@ const CARDAPIO = [
     nome: "PIZZA CALABRESA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, cebola e orégano.",
     preco: 40.00,
-    foto: "assets/img/pizza-calabresa.jpg"
+    foto: "assets/img/pizza-calabresa-bf.jpg"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA MUSSARELA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, tomate, azeitona e orégano.",
     preco: 40.00,
-    foto: "assets/img/pizza-marguerita.jpg"
+    foto: "assets/img/pizza-mussarela-bf.jpg"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA 4 QUEIJOS",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, Catupiry, cheddar, provolone e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-quatro-queijos.jpg"
+    foto: "assets/img/pizza-quatro-queijos-bf.jpg"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA FRANGO COM CATUPIRY",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, frango, Catupiry, tomate e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-frango-catupiry.jpg"
+    foto: "assets/img/pizza-frango-catupiry-bf.jpg"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA MISTA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, presunto, batata palha, azeitona e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-calabresa.jpg"
+    foto: "assets/img/pizza-mista-bf.jpg"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA PORTUGUESA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, presunto, Catupiry, tomate, pimentão, ovos cozidos, cebola, azeitona e orégano.",
     preco: 60.00,
-    foto: "assets/img/pizza-portuguesa.jpg"
+    foto: "assets/img/pizza-portuguesa-bf.jpg"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA CALABRESA COM BACON",
     descricao: "Tamanho G • 8 fatias. Molho especial, calabresa fatiada, bacon, queijo, muçarela e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-calabresa-bacon.jpg"
+    foto: "assets/img/pizza-calabresa-bacon-bf.jpg"
   },
 
   /* ---------------------------- HAMBURGUERES --------------------------- */
