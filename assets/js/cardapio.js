@@ -114,56 +114,101 @@ const CARDAPIO = [
     nome: "BF CLASSICO",
     descricao: "Pão brioche, 1 carne 150g, queijo mussarela, alface americana, tomate e molho especial da casa.",
     preco: 20.00,
-    foto: "assets/img/burger-bacon-cheddar.jpg"
+    foto: "assets/img/burger-bf-classico.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF CHICKEN",
     descricao: "Pão brioche, frango desfiado, queijo mussarela, alface americana, tomate e molho especial da casa.",
     preco: 20.00,
-    foto: "assets/img/burger-frango-cheddar.jpg"
+    foto: "assets/img/burger-bf-chicken.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF FAST",
     descricao: "Pão brioche, 1 carne 150g, bacon crocante, queijo mussarela, alface americana e molho BBQ.",
     preco: 25.00,
-    foto: "assets/img/burger-cheddar-bbq.jpg"
+    foto: "assets/img/burger-bf-fast.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF PREMIUM",
     descricao: "Pão brioche, alface, 1 carne (150g), calabresa, bacon, cebola caramelizada e molho da casa.",
     preco: 25.00,
-    foto: "assets/img/burger-duplo-bacon.jpg"
+    foto: "assets/img/burger-bf-premium.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF CHEDDAR",
     descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso em dobro, bacon crocante e molho especial da casa.",
     preco: 30.00,
-    foto: "assets/img/burger-bacon-cheddar.jpg"
+    foto: "assets/img/burger-bf-cheddar.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF PRIME",
     descricao: "Pão brioche, 2 carnes (150g cada), calabresa fatiada, bacon crocante, cebola caramelizada, queijo mussarela e molho especial da casa.",
     preco: 30.00,
-    foto: "assets/img/burger-smash-duplo.jpg"
+    foto: "assets/img/burger-bf-prime.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF SUPREME",
     descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso, mussarela, bacon crocante, calabresa fatiada, cebola caramelizada, alface americana, tomate e molho.",
     preco: 35.00,
-    foto: "assets/img/burger-costela-bbq.jpg"
+    foto: "assets/img/burger-bf-supreme.jpg"
   },
   {
     categoria: "burgers",
     nome: "BF MONSTER",
     descricao: "Pão brioche, 3 carnes (150g cada), bacon crocante, calabresa fatiada, cebola caramelizada, queijo mussarela triplo e molho especial da casa.",
     preco: 40.00,
-    foto: "assets/img/burger-smash-triplo.jpg"
+    foto: "assets/img/burger-bf-monster.jpg"
+  },
+
+
+  /* ------------------------------- COMBOS ------------------------------- */
+  {
+    categoria: "combos",
+    nome: "COMBO PIZZA CLÁSSICA",
+    descricao: "1 Pizza Calabresa G (8 fatias) + 2 Coca-Cola lata 350ml.",
+    preco: 47.00,
+    foto: "assets/img/pizza-calabresa-bf.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO PIZZA 4 QUEIJOS",
+    descricao: "1 Pizza 4 Queijos G (8 fatias) + 1 Coca-Cola 2L.",
+    preco: 59.00,
+    foto: "assets/img/pizza-quatro-queijos-bf.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO PIZZA PORTUGUESA",
+    descricao: "1 Pizza Portuguesa G (8 fatias) + 1 Fanta Laranja 2L.",
+    preco: 69.00,
+    foto: "assets/img/pizza-portuguesa-bf.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO BF CLÁSSICO",
+    descricao: "1 BF Clássico + 1 Coca-Cola lata 350ml.",
+    preco: 23.00,
+    foto: "assets/img/burger-bf-classico.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO DUPLO BF",
+    descricao: "2 BF Clássicos + 2 Coca-Cola lata 350ml.",
+    preco: 46.00,
+    foto: "assets/img/burger-bf-classico.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO BF PRIME",
+    descricao: "1 BF Prime + 1 Coca-Cola lata 350ml.",
+    preco: 33.00,
+    foto: "assets/img/burger-bf-prime.jpg"
   },
 
   /* ------------------------------ BEBIDAS ------------------------------ */
@@ -172,49 +217,49 @@ const CARDAPIO = [
     nome: "COCA-COLA LATA 350ML",
     descricao: "Coca-Cola lata 350ml, bem gelada.",
     preco: 5.00,
-    foto: "assets/img/coca-cola-lata.jpg"
+    foto: "assets/img/drink-coca-lata.jpg"
   },
   {
     categoria: "bebidas",
     nome: "GUARANÁ LATA 350ML",
     descricao: "Guaraná lata 350ml, bem gelado.",
     preco: 5.00,
-    foto: "assets/img/guarana-lata.jpg"
+    foto: "assets/img/drink-guarana-lata.jpg"
   },
   {
     categoria: "bebidas",
     nome: "COCA-COLA 2L",
     descricao: "Coca-Cola garrafa 2 litros, bem gelada.",
     preco: 13.00,
-    foto: "assets/img/refrigerante-2l.jpg"
+    foto: "assets/img/drink-coca-2l.jpg"
   },
   {
     categoria: "bebidas",
     nome: "FANTA LARANJA 2L",
     descricao: "Fanta Laranja garrafa 2 litros, bem gelada.",
     preco: 13.00,
-    foto: "assets/img/refrigerante-2l.jpg"
+    foto: "assets/img/drink-fanta-2l.jpg"
   },
   {
     categoria: "bebidas",
     nome: "ÁGUA 500ML",
     descricao: "Água mineral 500ml.",
     preco: 3.00,
-    foto: "assets/img/agua-mineral-500ml.jpg"
+    foto: "assets/img/drink-agua-500ml.jpg"
   },
   {
     categoria: "bebidas",
     nome: "SUCO NATURAL 300ML",
     descricao: "Suco natural 300ml. Consulte os sabores disponíveis.",
     preco: 5.00,
-    foto: "assets/img/suco-laranja-1l.jpg"
+    foto: "assets/img/drink-suco-300ml.jpg"
   },
   {
     categoria: "bebidas",
     nome: "SUCO NATURAL 1L",
     descricao: "Suco natural 1 litro. Consulte os sabores disponíveis.",
     preco: 15.00,
-    foto: "assets/img/suco-maracuja-1l.jpg"
+    foto: "assets/img/drink-suco-1l.jpg"
   }
 
 ];
