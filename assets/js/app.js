@@ -328,9 +328,37 @@
     return true;
   }
 
-  function montarMensagem() {
+  function gerarCodigoPedido() {
+    var agora = new Date();
+    function dois(n) { return String(n).padStart(2, "0"); }
+    var data = String(agora.getFullYear()).slice(-2) + dois(agora.getMonth() + 1) + dois(agora.getDate());
+    var hora = dois(agora.getHours()) + dois(agora.getMinutes());
+    var aleatorio = Math.random().toString(36).slice(2, 6).toUpperCase();
+    return "BF-" + data + "-" + hora + "-" + aleatorio;
+  }
+
+  async function hashTexto(texto) {
+    if (window.crypto && window.crypto.subtle && window.TextEncoder) {
+      var bytes = new TextEncoder().encode(texto);
+      var digest = await window.crypto.subtle.digest("SHA-256", bytes);
+      return Array.from(new Uint8Array(digest)).map(function (b) {
+        return b.toString(16).padStart(2, "0");
+      }).join("").toUpperCase();
+    }
+
+    // Fallback simples para navegadores muito antigos.
+    var h = 2166136261;
+    for (var i = 0; i < texto.length; i++) {
+      h ^= texto.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return ("00000000" + (h >>> 0).toString(16)).slice(-8).toUpperCase();
+  }
+
+  function montarMensagemBase(codigo) {
     var linhas = [];
     linhas.push("*NOVO PEDIDO - " + CONFIG.marcaLinha1 + " " + CONFIG.marcaLinha2 + "*");
+    linhas.push("*Codigo do pedido:* " + codigo);
     linhas.push("");
     linhas.push("*ITENS*");
 
@@ -363,15 +391,55 @@
     var obs = pega("#campoObs").value.trim();
     if (obs) { linhas.push("*Observa\u00e7\u00e3o:* " + obs); }
 
+    linhas.push("");
+    linhas.push("Pedido gerado automaticamente pelo site Bom Filho.");
     return linhas.join("\n");
   }
 
-  function enviar() {
+  function registrarLocalmente(codigo, mensagemBase, verificacao) {
+    try {
+      var chave = "bomfilho:pedidos-gerados";
+      var historico = JSON.parse(localStorage.getItem(chave) || "[]");
+      if (!Array.isArray(historico)) historico = [];
+      historico.unshift({
+        codigo: codigo,
+        verificacao: verificacao,
+        mensagem: mensagemBase,
+        criadoEm: new Date().toISOString()
+      });
+      localStorage.setItem(chave, JSON.stringify(historico.slice(0, 50)));
+    } catch (e) { /* ignora */ }
+  }
+
+  async function montarMensagemProtegida() {
+    var codigo = gerarCodigoPedido();
+    var base = montarMensagemBase(codigo);
+    var hash = await hashTexto(base);
+    var verificacao = hash.slice(0, 16);
+    registrarLocalmente(codigo, base, verificacao);
+
+    return base + "\n*Verificacao:* " + verificacao +
+      "\n\n⚠️ Se qualquer item, valor, total ou endereco acima for alterado manualmente, a verificacao deixa de conferir.";
+  }
+
+  async function enviar() {
     if (!pedido.length || !validar()) { return; }
-    var numero = String(CONFIG.whatsapp || "").replace(/\D/g, "");
-    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(montarMensagem());
-    window.open(url, "_blank", "noopener");
-    mostrarAviso("Pedido enviado no WhatsApp");
+    btnEnviar.disabled = true;
+    var textoOriginal = btnEnviar.textContent;
+    btnEnviar.textContent = "GERANDO PEDIDO...";
+
+    try {
+      var numero = String(CONFIG.whatsapp || "").replace(/\D/g, "");
+      var mensagem = await montarMensagemProtegida();
+      var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+      window.open(url, "_blank", "noopener");
+      mostrarAviso("Pedido protegido gerado");
+    } catch (e) {
+      mostrarAviso("Nao foi possivel gerar a verificacao");
+    } finally {
+      btnEnviar.disabled = false;
+      btnEnviar.textContent = textoOriginal;
+    }
   }
 
   /* --------------------------------------------------------------- eventos */

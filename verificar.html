@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Verificar pedido | Bom Filho Marituba</title>
+  <style>
+    :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0c0c0c;color:#fff;font-family:Arial,Helvetica,sans-serif}.wrap{max-width:820px;margin:auto;padding:28px 18px 50px}h1{margin:0 0 8px;color:#ffc400}p{line-height:1.5;color:#d6d6d6}.card{background:#161616;border:1px solid #333;border-radius:16px;padding:18px;margin-top:20px}textarea{width:100%;min-height:310px;background:#090909;color:#fff;border:1px solid #444;border-radius:12px;padding:14px;font:14px/1.45 monospace;resize:vertical}button,a.botao{display:inline-block;margin-top:12px;background:#ffc400;color:#111;border:0;border-radius:10px;padding:13px 18px;font-weight:800;cursor:pointer;text-decoration:none}.resultado{margin-top:16px;padding:14px;border-radius:12px;font-weight:700}.ok{background:#103d21;border:1px solid #238b49}.erro{background:#481717;border:1px solid #b53b3b}.neutro{background:#252525;border:1px solid #444}.historico{margin-top:24px}.pedido{padding:12px 0;border-bottom:1px solid #333}.codigo{font-family:monospace;color:#ffc400}.nota{font-size:13px;color:#aaa;margin-top:14px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Verificar pedido</h1>
+    <p>Cole abaixo a mensagem recebida no WhatsApp. O verificador confere se o conteúdo anterior ao código de verificação foi alterado manualmente.</p>
+    <section class="card">
+      <textarea id="mensagem" placeholder="Cole aqui a mensagem completa do pedido..."></textarea>
+      <button id="verificar" type="button">VERIFICAR PEDIDO</button>
+      <div id="resultado" class="resultado neutro">Aguardando uma mensagem.</div>
+      <p class="nota">Importante: esta proteção detecta alterações simples na mensagem. Como o site está hospedado apenas no GitHub Pages, ela não substitui um servidor privado com banco de dados.</p>
+    </section>
+    <section class="card historico">
+      <h2>Pedidos gerados neste navegador</h2>
+      <div id="historico"></div>
+    </section>
+    <a class="botao" href="./">VOLTAR AO SITE</a>
+  </main>
+  <script src="assets/js/verificar.js"></script>
+</body>
+</html>
