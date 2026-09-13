@@ -22,6 +22,9 @@ const CONFIG = {
      Exemplo Marituba/PA: "5591988887777"                                   */
   whatsapp: "559184188747",
 
+  /* ---- PAINEL DE DELIVERY ---- */
+  painelEndpoint: "https://bom-filho-delivery.lohandarkzin.chatgpt.site/api/orders",
+
   /* ---- ENDERECO (aparece no rodape) ---- */
   enderecoLinha1: "AV. JOAO PAULO II, 1200",
   enderecoLinha2: "CENTRO, MARITUBA - PA",
