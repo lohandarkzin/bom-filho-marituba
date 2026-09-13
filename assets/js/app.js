@@ -459,16 +459,32 @@
     btnEnviar.textContent = "GERANDO PEDIDO...";
 
     try {
-      var numero = String(CONFIG.whatsapp || "").replace(/\D/g, "");
+      var numeroLoja = String(CONFIG.whatsapp || "").replace(/\D/g, "");
       var mensagem = await montarMensagemProtegida();
       var registro = await registrarNoPainel();
       var numeroPedido = registro && registro.order ? registro.order.id : "";
+      var entregador = registro && registro.assignedCourier ? registro.assignedCourier : null;
+      var numeroEntregador = entregador && entregador.phone
+        ? String(entregador.phone).replace(/\D/g, "")
+        : "";
+
+      if (numeroEntregador.length === 10 || numeroEntregador.length === 11) {
+        numeroEntregador = "55" + numeroEntregador;
+      }
+
       if (numeroPedido) {
         mensagem += "\n*Numero no painel:* #" + numeroPedido;
       }
-      var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+      if (entregador && entregador.name) {
+        mensagem += "\n*Entregador:* " + entregador.name;
+      }
+
+      var numeroDestino = numeroEntregador.length >= 12 ? numeroEntregador : numeroLoja;
+      var url = "https://wa.me/" + numeroDestino + "?text=" + encodeURIComponent(mensagem);
       window.location.href = url;
-      mostrarAviso("Pedido enviado ao painel e preparado no WhatsApp");
+      mostrarAviso(numeroDestino === numeroEntregador
+        ? "Pedido enviado ao painel e preparado para o entregador"
+        : "Sem entregador ativo; pedido preparado para a loja");
     } catch (e) {
       formErro.textContent = "Nao foi possivel enviar ao painel. Tente novamente em instantes.";
       formErro.hidden = false;
