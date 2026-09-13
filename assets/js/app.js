@@ -464,7 +464,7 @@
       var registro = await registrarNoPainel();
       var numeroPedido = registro && registro.order ? registro.order.id : "";
       if (numeroPedido) {
-        mensagem = mensagem.replace("*NOVO PEDIDO", "*PEDIDO #" + numeroPedido + " - NOVO PEDIDO");
+        mensagem += "\n*Numero no painel:* #" + numeroPedido;
       }
       var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
       window.location.href = url;
