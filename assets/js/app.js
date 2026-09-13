@@ -303,14 +303,18 @@
 
   function validar() {
     var nome = pega("#campoNome");
+    var telefone = pega("#campoTelefone");
     var endereco = pega("#campoEndereco");
     var faltou = null;
 
-    [nome, endereco].forEach(function (c) { c.classList.remove("invalido"); });
+    [nome, telefone, endereco].forEach(function (c) { c.classList.remove("invalido"); });
 
     if (!nome.value.trim()) {
       nome.classList.add("invalido");
       faltou = "Escreva o seu nome para a gente saber de quem \u00e9 o pedido.";
+    } else if (telefone.value.replace(/\D/g, "").length < 10) {
+      telefone.classList.add("invalido");
+      faltou = "Escreva um telefone com DDD para contato.";
     } else if (ehEntrega() && !endereco.value.trim()) {
       endereco.classList.add("invalido");
       faltou = "Escreva o endere\u00e7o da entrega.";
@@ -374,6 +378,7 @@
     linhas.push("*TOTAL: " + dinheiro.format(subtotal() + taxa()) + "*");
     linhas.push("");
     linhas.push("*Cliente:* " + pega("#campoNome").value.trim());
+    linhas.push("*Telefone:* " + pega("#campoTelefone").value.trim());
 
     if (ehEntrega()) {
       linhas.push("*Entregar em:* " + pega("#campoEndereco").value.trim());
@@ -411,6 +416,31 @@
     } catch (e) { /* ignora */ }
   }
 
+  async function registrarNoPainel() {
+    var endpoint = String(CONFIG.painelEndpoint || "").trim();
+    if (!endpoint) { throw new Error("Painel nao configurado"); }
+
+    var itens = pedido.map(function (i) {
+      return i.qtd + "x " + i.nome + " - " + dinheiro.format(i.preco * i.qtd);
+    }).join("\n");
+
+    var resposta = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        customer: pega("#campoNome").value.trim(),
+        phone: pega("#campoTelefone").value.trim(),
+        address: ehEntrega() ? pega("#campoEndereco").value.trim() : "RETIRADA NA LOJA",
+        items: itens,
+        total: subtotal() + taxa(),
+        payment: pega("#campoPagamento").value
+      })
+    });
+
+    if (!resposta.ok) { throw new Error("Painel indisponivel"); }
+    return resposta.json();
+  }
+
   async function montarMensagemProtegida() {
     var codigo = gerarCodigoPedido();
     var base = montarMensagemBase(codigo);
@@ -431,11 +461,18 @@
     try {
       var numero = String(CONFIG.whatsapp || "").replace(/\D/g, "");
       var mensagem = await montarMensagemProtegida();
+      var registro = await registrarNoPainel();
+      var numeroPedido = registro && registro.order ? registro.order.id : "";
+      if (numeroPedido) {
+        mensagem = mensagem.replace("*NOVO PEDIDO", "*PEDIDO #" + numeroPedido + " - NOVO PEDIDO");
+      }
       var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
-      window.open(url, "_blank", "noopener");
-      mostrarAviso("Pedido protegido gerado");
+      window.location.href = url;
+      mostrarAviso("Pedido enviado ao painel e preparado no WhatsApp");
     } catch (e) {
-      mostrarAviso("Nao foi possivel gerar a verificacao");
+      formErro.textContent = "Nao foi possivel enviar ao painel. Tente novamente em instantes.";
+      formErro.hidden = false;
+      mostrarAviso("Pedido nao enviado");
     } finally {
       btnEnviar.disabled = false;
       btnEnviar.textContent = textoOriginal;
