@@ -26,6 +26,9 @@
   var aviso = pega("#aviso");
   var btnMenu = pega("#btnMenu");
   var nav = pega("#nav");
+  var btnLocalizacao = pega("#btnLocalizacao");
+  var statusLocalizacao = pega("#statusLocalizacao");
+  var localizacaoAtual = "";
 
   var categoriaAtual = "pizzas";
   var avisoPizzas = document.getElementById("avisoPizzas");
@@ -265,6 +268,7 @@
 
     pega("#linhaTaxa").hidden = !ehEntrega();
     pega("#campoEnderecoBox").hidden = !ehEntrega();
+    pega("#localizacaoBox").hidden = !ehEntrega();
     barraMobile.hidden = !temItem;
     document.body.style.paddingBottom = temItem ? "84px" : "";
   }
@@ -382,6 +386,7 @@
 
     if (ehEntrega()) {
       linhas.push("*Entregar em:* " + pega("#campoEndereco").value.trim());
+      if (localizacaoAtual) { linhas.push("*Localização exata:* " + localizacaoAtual); }
     } else {
       linhas.push("*Retirada na loja*");
     }
@@ -431,6 +436,7 @@
         customer: pega("#campoNome").value.trim(),
         phone: pega("#campoTelefone").value.trim(),
         address: ehEntrega() ? pega("#campoEndereco").value.trim() : "RETIRADA NA LOJA",
+        location: ehEntrega() ? localizacaoAtual : "",
         items: itens,
         total: subtotal() + taxa(),
         payment: pega("#campoPagamento").value
@@ -495,6 +501,33 @@
     }
   }
 
+  function usarLocalizacaoAtual() {
+    if (!navigator.geolocation) {
+      statusLocalizacao.textContent = "Este aparelho não oferece localização.";
+      statusLocalizacao.className = "localizacao-erro";
+      return;
+    }
+    btnLocalizacao.disabled = true;
+    statusLocalizacao.textContent = "Buscando sua localização...";
+    statusLocalizacao.className = "localizacao-buscando";
+    navigator.geolocation.getCurrentPosition(function (posicao) {
+      var latitude = posicao.coords.latitude.toFixed(6);
+      var longitude = posicao.coords.longitude.toFixed(6);
+      localizacaoAtual = "https://www.google.com/maps?q=" + latitude + "," + longitude;
+      statusLocalizacao.textContent = "✓ Localização autorizada e adicionada a este pedido.";
+      statusLocalizacao.className = "localizacao-ok";
+      btnLocalizacao.textContent = "📍 LOCALIZAÇÃO ADICIONADA";
+      btnLocalizacao.disabled = false;
+    }, function (erro) {
+      var mensagem = erro.code === 1
+        ? "A localização não foi autorizada. Você ainda pode informar o endereço manualmente."
+        : "Não foi possível obter a localização. Tente novamente.";
+      statusLocalizacao.textContent = mensagem;
+      statusLocalizacao.className = "localizacao-erro";
+      btnLocalizacao.disabled = false;
+    }, { enableHighAccuracy: true, timeout: 12000, maximumAge: 60000 });
+  }
+
   /* --------------------------------------------------------------- eventos */
 
   pegaTodos(".aba").forEach(function (aba) {
@@ -516,6 +549,7 @@
   pega("#btnFechar").addEventListener("click", fecharCarrinho);
   cortina.addEventListener("click", fecharCarrinho);
   btnEnviar.addEventListener("click", enviar);
+  btnLocalizacao.addEventListener("click", usarLocalizacaoAtual);
   campoBusca.addEventListener("input", renderCardapio);
 
   btnMenu.addEventListener("click", function () {
