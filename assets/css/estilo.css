@@ -860,3 +860,13 @@ body.travado .barra-mobile { display: none; }
   text-transform: uppercase;
 }
 .aviso-pizzas strong { font-weight: 800; }
+
+
+/* Localização atual do cliente */
+.localizacao-box{margin-top:-2px;padding:12px;border:1px solid #d8c56a;background:#fff9dc;border-radius:10px}
+.btn-localizacao{width:100%;min-height:44px;border:1px solid #b99a18;border-radius:8px;background:#f5c400;color:#17120a;font:700 14px "Barlow",sans-serif;cursor:pointer}
+.btn-localizacao:hover{background:#ffd83d}.btn-localizacao:disabled{cursor:wait;opacity:.7}
+.localizacao-box p{margin:8px 2px 0;font-size:13px;line-height:1.4;color:#665f4c}
+.localizacao-box .localizacao-ok{color:#16733a;font-weight:700}
+.localizacao-box .localizacao-erro{color:#b1261d;font-weight:700}
+.localizacao-box .localizacao-buscando{color:#705900}
