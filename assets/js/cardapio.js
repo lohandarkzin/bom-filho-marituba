@@ -194,6 +194,34 @@ const CARDAPIO = [
   },
   {
     categoria: "combos",
+    nome: "COMBO FAMÍLIA PIZZA",
+    descricao: "2 Pizzas G clássicas (Calabresa ou Mussarela) + 1 Coca-Cola 2L. Informe os sabores nas observações.",
+    preco: 85.00,
+    foto: "assets/img/pizza-calabresa-bf.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO DUPLO ESPECIAL",
+    descricao: "1 Pizza Frango com Catupiry G + 1 Pizza 4 Queijos G + 1 Coca-Cola 2L.",
+    preco: 105.00,
+    foto: "assets/img/pizza-frango-catupiry-bf.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO PIZZA COMPLETO",
+    descricao: "1 Pizza Portuguesa G + 1 Pizza Calabresa com Bacon G + 1 Coca-Cola 2L.",
+    preco: 115.00,
+    foto: "assets/img/pizza-portuguesa-bf.jpg"
+  },
+  {
+    categoria: "combos",
+    nome: "COMBO TRIO DE PIZZAS",
+    descricao: "3 Pizzas G clássicas (Calabresa ou Mussarela) + 1 Coca-Cola 2L. Informe os sabores nas observações.",
+    preco: 120.00,
+    foto: "assets/img/pizza-mussarela-bf.jpg"
+  },
+  {
+    categoria: "combos",
     nome: "COMBO BF CLÁSSICO",
     descricao: "1 BF Clássico + 1 Coca-Cola lata 350ml.",
     preco: 23.00,
