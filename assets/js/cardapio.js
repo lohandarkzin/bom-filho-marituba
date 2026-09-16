@@ -66,49 +66,49 @@ const CARDAPIO = [
     nome: "PIZZA CALABRESA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, cebola e orégano.",
     preco: 40.00,
-    foto: "assets/img/pizza-calabresa-bf.jpg"
+    foto: "assets/img/pizza-calabresa-bf.jpg?v=2"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA MUSSARELA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, tomate, azeitona e orégano.",
     preco: 40.00,
-    foto: "assets/img/pizza-mussarela-bf.jpg"
+    foto: "assets/img/pizza-mussarela-bf.jpg?v=2"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA 4 QUEIJOS",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, Catupiry, cheddar, provolone e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-quatro-queijos-bf.jpg"
+    foto: "assets/img/pizza-quatro-queijos-bf.jpg?v=2"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA FRANGO COM CATUPIRY",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, frango, Catupiry, tomate e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-frango-catupiry-bf.jpg"
+    foto: "assets/img/pizza-frango-catupiry-bf.jpg?v=2"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA MISTA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, calabresa, presunto, batata palha, azeitona e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-mista-bf.jpg"
+    foto: "assets/img/pizza-mista-bf.jpg?v=2"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA PORTUGUESA",
     descricao: "Tamanho G • 8 fatias. Molho especial, queijo, presunto, Catupiry, tomate, pimentão, ovos cozidos, cebola, azeitona e orégano.",
     preco: 60.00,
-    foto: "assets/img/pizza-portuguesa-bf.jpg"
+    foto: "assets/img/pizza-portuguesa-bf.jpg?v=2"
   },
   {
     categoria: "pizzas",
     nome: "PIZZA CALABRESA COM BACON",
     descricao: "Tamanho G • 8 fatias. Molho especial, calabresa fatiada, bacon, queijo, muçarela e orégano.",
     preco: 50.00,
-    foto: "assets/img/pizza-calabresa-bacon-bf.jpg"
+    foto: "assets/img/pizza-calabresa-bacon-bf.jpg?v=2"
   },
 
   /* ---------------------------- HAMBURGUERES --------------------------- */
@@ -176,49 +176,49 @@ const CARDAPIO = [
     nome: "COMBO PIZZA CLÁSSICA",
     descricao: "1 Pizza Calabresa G (8 fatias) + 2 Coca-Cola lata 350ml.",
     preco: 47.00,
-    foto: "assets/img/pizza-calabresa-bf.jpg"
+    foto: "assets/img/pizza-calabresa-bf.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO PIZZA 4 QUEIJOS",
     descricao: "1 Pizza 4 Queijos G (8 fatias) + 1 Coca-Cola 2L.",
     preco: 59.00,
-    foto: "assets/img/pizza-quatro-queijos-bf.jpg"
+    foto: "assets/img/pizza-quatro-queijos-bf.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO PIZZA PORTUGUESA",
     descricao: "1 Pizza Portuguesa G (8 fatias) + 1 Fanta Laranja 2L.",
     preco: 69.00,
-    foto: "assets/img/pizza-portuguesa-bf.jpg"
+    foto: "assets/img/pizza-portuguesa-bf.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO FAMÍLIA PIZZA",
     descricao: "2 Pizzas G clássicas (Calabresa ou Mussarela) + 1 Coca-Cola 2L. Informe os sabores nas observações.",
     preco: 85.00,
-    foto: "assets/img/pizza-calabresa-bf.jpg"
+    foto: "assets/img/pizza-calabresa-bf.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO DUPLO ESPECIAL",
     descricao: "1 Pizza Frango com Catupiry G + 1 Pizza 4 Queijos G + 1 Coca-Cola 2L.",
     preco: 105.00,
-    foto: "assets/img/pizza-frango-catupiry-bf.jpg"
+    foto: "assets/img/pizza-frango-catupiry-bf.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO PIZZA COMPLETO",
     descricao: "1 Pizza Portuguesa G + 1 Pizza Calabresa com Bacon G + 1 Coca-Cola 2L.",
     preco: 115.00,
-    foto: "assets/img/pizza-portuguesa-bf.jpg"
+    foto: "assets/img/pizza-portuguesa-bf.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO TRIO DE PIZZAS",
     descricao: "3 Pizzas G clássicas (Calabresa ou Mussarela) + 1 Coca-Cola 2L. Informe os sabores nas observações.",
     preco: 120.00,
-    foto: "assets/img/pizza-mussarela-bf.jpg"
+    foto: "assets/img/pizza-mussarela-bf.jpg?v=2"
   },
   {
     categoria: "combos",
@@ -278,49 +278,49 @@ const CARDAPIO = [
     nome: "COCA-COLA LATA 350ML",
     descricao: "Coca-Cola lata 350ml, bem gelada.",
     preco: 5.00,
-    foto: "assets/img/drink-coca-lata.jpg"
+    foto: "assets/img/drink-coca-lata.jpg?v=2"
   },
   {
     categoria: "bebidas",
     nome: "GUARANÁ LATA 350ML",
     descricao: "Guaraná lata 350ml, bem gelado.",
     preco: 5.00,
-    foto: "assets/img/drink-guarana-lata.jpg"
+    foto: "assets/img/drink-guarana-lata.jpg?v=2"
   },
   {
     categoria: "bebidas",
     nome: "COCA-COLA 2L",
     descricao: "Coca-Cola garrafa 2 litros, bem gelada.",
     preco: 13.00,
-    foto: "assets/img/drink-coca-2l.jpg"
+    foto: "assets/img/drink-coca-2l.jpg?v=2"
   },
   {
     categoria: "bebidas",
     nome: "FANTA LARANJA 2L",
     descricao: "Fanta Laranja garrafa 2 litros, bem gelada.",
     preco: 13.00,
-    foto: "assets/img/drink-fanta-2l.jpg"
+    foto: "assets/img/drink-fanta-2l.jpg?v=2"
   },
   {
     categoria: "bebidas",
     nome: "ÁGUA 500ML",
     descricao: "Água mineral 500ml.",
     preco: 3.00,
-    foto: "assets/img/drink-agua-500ml.jpg"
+    foto: "assets/img/drink-agua-500ml.jpg?v=2"
   },
   {
     categoria: "bebidas",
     nome: "SUCO NATURAL 300ML",
     descricao: "Suco natural 300ml. Consulte os sabores disponíveis.",
     preco: 5.00,
-    foto: "assets/img/drink-suco-300ml.jpg"
+    foto: "assets/img/drink-suco-300ml.jpg?v=2"
   },
   {
     categoria: "bebidas",
     nome: "SUCO NATURAL 1L",
     descricao: "Suco natural 1 litro. Consulte os sabores disponíveis.",
     preco: 15.00,
-    foto: "assets/img/drink-suco-1l.jpg"
+    foto: "assets/img/drink-suco-1l.jpg?v=2"
   }
 
 ];
