@@ -117,56 +117,56 @@ const CARDAPIO = [
     nome: "BF CLASSICO",
     descricao: "Pão brioche, 1 carne 150g, queijo mussarela, alface americana, tomate e molho especial da casa.",
     preco: 20.00,
-    foto: "assets/img/burger-bf-classico.jpg"
+    foto: "assets/img/burger-bf-classico.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF CHICKEN",
     descricao: "Pão brioche, frango desfiado, queijo mussarela, alface americana, tomate e molho especial da casa.",
     preco: 20.00,
-    foto: "assets/img/burger-bf-chicken.jpg"
+    foto: "assets/img/burger-bf-chicken.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF FAST",
     descricao: "Pão brioche, 1 carne 150g, bacon crocante, queijo mussarela, alface americana e molho BBQ.",
     preco: 25.00,
-    foto: "assets/img/burger-bf-fast.jpg"
+    foto: "assets/img/burger-bf-fast.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF PREMIUM",
     descricao: "Pão brioche, alface, 1 carne (150g), calabresa, bacon, cebola caramelizada e molho da casa.",
     preco: 25.00,
-    foto: "assets/img/burger-bf-premium.jpg"
+    foto: "assets/img/burger-bf-premium.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF CHEDDAR",
     descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso em dobro, bacon crocante e molho especial da casa.",
     preco: 30.00,
-    foto: "assets/img/burger-bf-cheddar.jpg"
+    foto: "assets/img/burger-bf-cheddar.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF PRIME",
     descricao: "Pão brioche, 2 carnes (150g cada), calabresa fatiada, bacon crocante, cebola caramelizada, queijo mussarela e molho especial da casa.",
     preco: 30.00,
-    foto: "assets/img/burger-bf-prime.jpg"
+    foto: "assets/img/burger-bf-prime.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF SUPREME",
     descricao: "Pão brioche, 2 carnes (150g cada), cheddar cremoso, mussarela, bacon crocante, calabresa fatiada, cebola caramelizada, alface americana, tomate e molho.",
     preco: 35.00,
-    foto: "assets/img/burger-bf-supreme.jpg"
+    foto: "assets/img/burger-bf-supreme.jpg?v=2"
   },
   {
     categoria: "burgers",
     nome: "BF MONSTER",
     descricao: "Pão brioche, 3 carnes (150g cada), bacon crocante, calabresa fatiada, cebola caramelizada, queijo mussarela triplo e molho especial da casa.",
     preco: 40.00,
-    foto: "assets/img/burger-bf-monster.jpg"
+    foto: "assets/img/burger-bf-monster.jpg?v=2"
   },
 
 
@@ -225,21 +225,21 @@ const CARDAPIO = [
     nome: "COMBO BF CLÁSSICO",
     descricao: "1 BF Clássico + 1 Coca-Cola lata 350ml.",
     preco: 23.00,
-    foto: "assets/img/burger-bf-classico.jpg"
+    foto: "assets/img/burger-bf-classico.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO DUPLO BF",
     descricao: "2 BF Clássicos + 2 Coca-Cola lata 350ml.",
     preco: 46.00,
-    foto: "assets/img/burger-bf-classico.jpg"
+    foto: "assets/img/burger-bf-classico.jpg?v=2"
   },
   {
     categoria: "combos",
     nome: "COMBO BF PRIME",
     descricao: "1 BF Prime + 1 Coca-Cola lata 350ml.",
     preco: 33.00,
-    foto: "assets/img/burger-bf-prime.jpg"
+    foto: "assets/img/burger-bf-prime.jpg?v=2"
   },
 
   /* ----------------------------- REFEIÇÕES ----------------------------- */
