@@ -46,7 +46,7 @@ const CONFIG = {
    CARDAPIO
    --------------------------------------------------------------------------
    Cada item tem:
-     categoria -> "pizzas", "burgers", "combos" ou "bebidas"
+     categoria -> "pizzas", "burgers", "combos", "refeicoes" ou "bebidas"
      nome      -> nome que aparece no card
      descricao -> ingredientes, uma linha
      preco     -> use ponto no lugar da virgula. Ex.: 49.90
@@ -240,6 +240,36 @@ const CARDAPIO = [
     descricao: "1 BF Prime + 1 Coca-Cola lata 350ml.",
     preco: 33.00,
     foto: "assets/img/burger-bf-prime.jpg"
+  },
+
+  /* ----------------------------- REFEIÇÕES ----------------------------- */
+  {
+    categoria: "refeicoes",
+    nome: "CARNE ASSADA DE PANELA",
+    descricao: "Carne assada de panela bem temperada, preparada no capricho.",
+    preco: 20.00,
+    foto: "assets/img/hero-brasa.jpg"
+  },
+  {
+    categoria: "refeicoes",
+    nome: "CALABRESA ACEBOLADA",
+    descricao: "Calabresa acebolada douradinha e bem temperada.",
+    preco: 20.00,
+    foto: "assets/img/hero-brasa.jpg"
+  },
+  {
+    categoria: "refeicoes",
+    nome: "BIFE AO MOLHO MADEIRA",
+    descricao: "Bife macio servido com molho madeira saboroso.",
+    preco: 20.00,
+    foto: "assets/img/hero-brasa.jpg"
+  },
+  {
+    categoria: "refeicoes",
+    nome: "FRANGO AO FORNO",
+    descricao: "Frango assado ao forno, dourado e bem temperado.",
+    preco: 20.00,
+    foto: "assets/img/hero-brasa.jpg"
   },
 
   /* ------------------------------ BEBIDAS ------------------------------ */
