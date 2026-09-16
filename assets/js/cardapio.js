@@ -248,28 +248,28 @@ const CARDAPIO = [
     nome: "CARNE ASSADA DE PANELA",
     descricao: "Carne assada de panela bem temperada, preparada no capricho.",
     preco: 20.00,
-    foto: "assets/img/hero-brasa.jpg"
+    foto: "https://commons.wikimedia.org/wiki/Special:FilePath/Beef%20stew%20%2815707525894%29.jpg?width=900"
   },
   {
     categoria: "refeicoes",
     nome: "CALABRESA ACEBOLADA",
     descricao: "Calabresa acebolada douradinha e bem temperada.",
     preco: 20.00,
-    foto: "assets/img/hero-brasa.jpg"
+    foto: "https://commons.wikimedia.org/wiki/Special:FilePath/DSC04403%20Fried%20sausage%20with%20onions.JPG?width=900"
   },
   {
     categoria: "refeicoes",
     nome: "BIFE AO MOLHO MADEIRA",
     descricao: "Bife macio servido com molho madeira saboroso.",
     preco: 20.00,
-    foto: "assets/img/hero-brasa.jpg"
+    foto: "https://commons.wikimedia.org/wiki/Special:FilePath/Heldrunger%20Sauerbraten%202.JPG?width=900"
   },
   {
     categoria: "refeicoes",
     nome: "FRANGO AO FORNO",
     descricao: "Frango assado ao forno, dourado e bem temperado.",
     preco: 20.00,
-    foto: "assets/img/hero-brasa.jpg"
+    foto: "https://commons.wikimedia.org/wiki/Special:FilePath/02023%200151%20Roasted%20Chicken%20and%20Potatoes.jpg?width=900"
   },
 
   /* ------------------------------ BEBIDAS ------------------------------ */
